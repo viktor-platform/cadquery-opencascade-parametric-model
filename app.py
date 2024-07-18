@@ -54,6 +54,11 @@ class Controller(ViktorController):
 
     @GeometryView("Geometry", duration_guess=1, x_axis_to_right=True)
     def get_geometry_view(self, params, **kwargs):
+        """
+        Renders the 3d model. First it (re-)generates the assembly. Then,
+        exports the gltf data to a temporary file, which is passed to
+        GeometryResult and displayed as a GeometryView.
+        """
         assy, _ = generate_assembly(params)
         glb = File()  # temporary file to store 3D model as gltf data
         cq.occ_impl.exporters.assembly.exportGLTF(assy, glb.source, True)
@@ -61,6 +66,11 @@ class Controller(ViktorController):
 
     @ImageView("Drawing", duration_guess=1)
     def create_result(self, params, **kwargs):
+        """
+        Renders the 2D schematic. First it (re-)generates the assembly. Then,
+        exports the svg to a temporary file, which is passed to
+        ImageResult and displayed as an ImageView.
+        """
         _, body = generate_assembly(params)
         svg = File()  # temporary file to store 2D schematic as svg
         cq.exporters.export(body, svg.source, exportType=cq.exporters.ExportTypes.SVG)
