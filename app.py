@@ -49,7 +49,7 @@ def generate_assembly(params):
 
 
 class Controller(ViktorController):
-    label = 'My Entity Type'
+    label = "cascade controller"
     parametrization = Parametrization
 
     @GeometryView("Geometry", duration_guess=1, x_axis_to_right=True)
