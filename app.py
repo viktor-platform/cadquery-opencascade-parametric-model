@@ -1,13 +1,9 @@
-from viktor import ViktorController
-from viktor.parametrization import ViktorParametrization, NumberField
-from viktor import Color
-from viktor.geometry import Group, LinearPattern, SquareBeam, Material
-from viktor.views import GeometryResult, GeometryView, ImageView, ImageResult
-from viktor.core import File
-
 import cadquery as cq
+from viktor import ViktorController
+from viktor.core import File
+from viktor.parametrization import NumberField, ViktorParametrization
+from viktor.views import GeometryResult, GeometryView, ImageResult, ImageView
 
-from pathlib import Path
 
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning) 
