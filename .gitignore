@@ -1,4 +1,2 @@
-*.gltb
-*.svg
 venv/
 __pycache__/
