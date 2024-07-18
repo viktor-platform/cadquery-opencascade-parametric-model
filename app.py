@@ -47,8 +47,6 @@ def generate_assembly(params):
     assy.add(body, color=cq.Color(1, 0.27, 0.0), name="body")
     return assy, body
 
-GLTB_PATH = Path(__file__).parent / "output.gltb"
-SVG_PATH = Path(__file__).parent / "output.svg"
 
 class Controller(ViktorController):
     label = 'My Entity Type'
@@ -57,13 +55,13 @@ class Controller(ViktorController):
     @GeometryView("Geometry", duration_guess=1, x_axis_to_right=True)
     def get_geometry_view(self, params, **kwargs):
         assy, _ = generate_assembly(params)
-        cq.occ_impl.exporters.assembly.exportGLTF(assy, str(GLTB_PATH), True)
-        return GeometryResult(File.from_path(GLTB_PATH))
-    
+        glb = File()  # temporary file to store 3D model as gltf data
+        cq.occ_impl.exporters.assembly.exportGLTF(assy, glb.source, True)
+        return GeometryResult(geometry=glb)
 
     @ImageView("Drawing", duration_guess=1)
     def create_result(self, params, **kwargs):
         _, body = generate_assembly(params)
-        cq.exporters.export(body, str(SVG_PATH))
-
-        return ImageResult(File.from_path(SVG_PATH))
+        svg = File()  # temporary file to store 2D schematic as svg
+        cq.exporters.export(body, svg.source, exportType=cq.exporters.ExportTypes.SVG)
+        return ImageResult(svg)
