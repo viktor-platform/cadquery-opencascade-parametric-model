@@ -5,10 +5,6 @@ from viktor.parametrization import NumberField, ViktorParametrization
 from viktor.views import GeometryResult, GeometryView, ImageResult, ImageView
 
 
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning) 
-warnings.filterwarnings("ignore", category=DeprecationWarning) 
-
 class Parametrization(ViktorParametrization):
     length = NumberField("Length [mm]", default=30)
     height = NumberField("Height [mm]", default=40)
