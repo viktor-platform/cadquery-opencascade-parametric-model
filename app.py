@@ -15,9 +15,19 @@ class Parametrization(ViktorParametrization):
 
 
 def generate_assembly(params):
+    """
+    Defines the CAD geometry using the parametrization.
+    """
     assy = cq.Assembly()
 
-    (length, height, bearing_diam, thickness, padding) = (params.length, params.height, params.bearing_diam, params.thickness, params.padding)
+    # obtain parametrization fields
+    (length, height, bearing_diam, thickness, padding) = (
+        params.length,
+        params.height,
+        params.bearing_diam,
+        params.thickness,
+        params.padding,
+    )
 
     body = (
         cq.Workplane("XY")
@@ -33,6 +43,7 @@ def generate_assembly(params):
         .edges("|Z")
         .fillet(params.fillet)
     )
+
     assy.add(body, color=cq.Color(1, 0.27, 0.0), name="body")
     return assy, body
 
