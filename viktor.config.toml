@@ -6,5 +6,5 @@ app_type = 'editor'
 # packages = []
 python_version = '3.11'  # '3.9' | '3.10' | '3.11' | '3.12'
 # welcome_text = 'welcome.md'
-registered_name = 'cad-demo'
+registered_name = 'opencascade-example'
 packages = ["libgl1"]
