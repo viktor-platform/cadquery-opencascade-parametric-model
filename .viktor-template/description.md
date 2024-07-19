@@ -1,7 +1,8 @@
-This sample app shows how to construct intricated 3D models and schematics from within Viktor.
+This innovative application demonstrates the advanced capabilities of constructing intricate 3D models and schematics within Viktor.
 
-The goal of this app is to show that Viktor can handle detailed geometries next to those constructed with its built-in geometry module. This is achieved by using an open-source python library ([```CadQuery```](https://cadquery.readthedocs.io/en/latest/index.html)), which allows us to build (parametric) 3D CAD models and output those in high qaulity CAD formats (STEP, AMF, 3MF and GLTF). 
+The primary objective of this app is to showcase Viktor's proficiency in handling complex geometries alongside those created with its native geometry module. This is accomplished by integrating an open-source Python library, [```CadQuery```](https://cadquery.readthedocs.io/en/latest/index.html), which enables the creation of parametric 3D CAD models and their export in high-quality CAD formats such as STEP, AMF, 3MF, and GLTF.
 
-The following functionalities are showcased in this app
-- Parametric 3D modelling
-- Viktor's Geometry & Image views
+Key functionalities featured in this app include:
+
+    Advanced parametric 3D modeling
+    Enhanced visualization through Viktor's Geometry and Image views
