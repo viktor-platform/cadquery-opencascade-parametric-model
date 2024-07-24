@@ -1,6 +1,6 @@
 import warnings
 
-# supress user- and deprecations warnings resulting from cadquery module
+# supress user- and deprecation warnings resulting from cadquery module
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -62,7 +62,7 @@ class Controller(ViktorController):
     @GeometryView("Geometry", duration_guess=1, x_axis_to_right=True)
     def get_geometry_view(self, params, **kwargs):
         """
-        Renders the 3d model. First it (re-)generates the assembly. Then,
+        Renders the 3D model. First it (re-)generates the assembly. Then,
         exports the gltf data to a temporary file, which is passed to
         GeometryResult and displayed as a GeometryView.
         """
