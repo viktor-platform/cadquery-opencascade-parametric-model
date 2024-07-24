@@ -13,12 +13,12 @@ from viktor.views import GeometryResult, GeometryView, ImageResult, ImageView
 import cadquery as cq
 
 class Parametrization(ViktorParametrization):
-    length = NumberField("Length [mm]", default=30)
-    height = NumberField("Height [mm]", default=40)
-    bearing_diam = NumberField("Bearing diameter [mm]", default=22)
-    thickness = NumberField("Thickness [mm]", default=10)
-    padding = NumberField("Padding [mm]", default=8)
-    fillet = NumberField("Fillet [mm]", default=2, num_decimals=1, step=0.5)
+    length = NumberField("Length", default=30, suffix="mm")
+    height = NumberField("Height", default=40, suffix="mm")
+    bearing_diam = NumberField("Bearing diameter", default=22, suffix="mm")
+    thickness = NumberField("Thickness", default=10, suffix="mm")
+    padding = NumberField("Padding", default=8, suffix="mm")
+    fillet = NumberField("Fillet", default=2, num_decimals=1, step=0.5, suffix="mm")
 
 
 def generate_assembly(params):
