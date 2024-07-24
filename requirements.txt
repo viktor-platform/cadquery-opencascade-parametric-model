@@ -1,3 +1,2 @@
 viktor==14.13.0
 cadquery==2.4.0
-numpy==1.23.5
