@@ -9,6 +9,8 @@ from viktor.core import File
 from viktor.parametrization import NumberField, ViktorParametrization
 from viktor.views import GeometryResult, GeometryView, ImageResult, ImageView
 
+# OpenCascade library
+import cadquery as cq
 
 class Parametrization(ViktorParametrization):
     length = NumberField("Length [mm]", default=30)
