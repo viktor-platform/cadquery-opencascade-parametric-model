@@ -56,7 +56,7 @@ def generate_assembly(params):
 
 
 class Controller(ViktorController):
-    label = "cascade controller"
+    label = "pillow block"
     parametrization = Parametrization
 
     @GeometryView("Geometry", duration_guess=1, x_axis_to_right=True)
