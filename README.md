@@ -40,7 +40,7 @@ body = (
     .fillet(params.fillet)
 )
 ```
-The assembly is then exported using one of CadQuery's many export functions to a format that Viktor's GeometryView can display in ```get_geometry_view()```
+The assembly is then exported using one of CadQuery's many export functions to a format that VIKTOR's GeometryView can display in ```get_geometry_view()```
 ```Python
 assy, _ = generate_assembly(params)
 glb = File()  # temporary file to store 3D model as gltf data
