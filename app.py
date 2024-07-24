@@ -1,4 +1,9 @@
-import cadquery as cq
+import warnings
+
+# supress user- and deprecations warnings resulting from cadquery module
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from viktor import ViktorController
 from viktor.core import File
 from viktor.parametrization import NumberField, ViktorParametrization
